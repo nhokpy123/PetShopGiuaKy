@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pet Shop - Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<h2>Welcome to the Pet Shop</h2>
+<h3>Danh sách thú cưng</h3>
+<table border="1">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Loại</th>
+        <th>Giống</th>
+        <th>Màu</th>
+        <th>Giá</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Lặp qua danh sách thú cưng -->
+    <tr th:each="pet : ${pets}">
+        <td th:text="${pet.stt}">1</td>
+        <td th:text="${pet.loai}">Chó</td>
+        <td th:text="${pet.giong}">Chihuahua</td>
+        <td th:text="${pet.mau}">Trắng</td>
+        <td th:text="${pet.gia}">1500</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
